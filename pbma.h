@@ -12,7 +12,6 @@
  * und zu evaluieren.
  * Verwendung: Beide Quell-Dateien pbma.(h|cpp) in das Projekt kopieren.
  */
-
 #include <chrono>
 #include <exception>
 #include <iomanip>
@@ -68,7 +67,7 @@ bool file_exists(const std::string& filename);
  * @param filename Dateiname der einzulesenden Datei
  * @return binärer Inhalt der Datei
  */
-std::vector<char> read_bytes(const std::string& filename);
+ std::vector<char> read_bytes(const std::string& filename);
 
 /** Vollständiges Lesen einer Textdatei als vector<string>,
  * Kommentarzeilen (#..) ignorieren, leere Zeilen ignorieren,
