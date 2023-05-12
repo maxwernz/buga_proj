@@ -1,0 +1,3 @@
+/Users/max/dev/studium/buga_proj/cmake-build-debug/CMakeFiles/buga_proj.dir
+/Users/max/dev/studium/buga_proj/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/max/dev/studium/buga_proj/cmake-build-debug/CMakeFiles/rebuild_cache.dir
