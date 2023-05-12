@@ -4,8 +4,6 @@
 
 #include "Acker.h"
 
-#include <utility>
-
 Acker::Acker(const std::vector<std::string>& lines, std::string  path) : m_lines(lines), m_path(std::move(path)){
     m_rows = int(lines.size());
     if (m_rows > 0) {
@@ -43,10 +41,40 @@ int Acker::get_flowers() {
     int flowers = 0;
     for (const std::string& line : m_lines) {
         for (const char& ch : line) {
-            if (ch == '*') {
-                flowers += 1;
-            }
+            flowers += flowers_per_row(line);
         }
     }
     return flowers;
+}
+
+int Acker::flowers_per_row(const std::string& row) {
+    int flowers = 0;
+    for (const char& ch : row) {
+        if (ch == '*')
+            flowers += 1;
+    }
+    return flowers;
+}
+
+std::vector<std::string> Acker::simple_solution(int& steps, int& tour_numbers) {
+    std::vector<std::string> tours;
+    std::string tour;
+
+    for (int i=m_rows-1; i >= 0; --i) {
+        bool flowers_in_row = bool(flowers_per_row(m_lines[i]));
+        if (flowers_in_row) {
+            for (int k=(m_rows-1)-i; k > 0; --k) {
+                tour.append("o");
+                steps += 1;
+            }
+            for (int j=0; j < m_columns; ++j) {
+                tour.append("r");
+                steps += 1;
+            }
+            tours.push_back(tour);
+            tour.clear();
+            tour_numbers += 1;
+        }
+    }
+    return tours;
 }
