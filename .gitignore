@@ -1,1 +1,12 @@
+/cmake-build-debug/
 cmake-build-debug
+cmake-build-debug/
+/cmake-build-debug/CMakeCache.txt
+/cmake-build-debug/cmake_install.cmake
+/cmake-build-debug/build.ninja
+/cmake-build-debug/buga_proj
+/cmake-build-debug/.ninja_log
+/cmake-build-debug/.ninja_deps
+/cmake-build-debug/Testing/
+/cmake-build-debug/CMakeFiles/
+/cmake-build-debug/.cmake/
